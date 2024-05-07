@@ -5,7 +5,6 @@
 // }
 // fooGlobal.call(); // window
 
-
 // const person1 = {
 //    name: "Dasha",
 //    lastname: "Yurko",
@@ -21,8 +20,6 @@
 // }
 // printName.call(person1);
 // printName.call(person2);
-
-
 
 const ancestor = {
   name: "Paul",
@@ -44,11 +41,11 @@ const ancestor = {
 // console.log(child.heritage);
 
 /**
- * 
- * 
+ *
+ *
  * ======================================= CLASS =====================================
  */
- 
+
 // class Human {
 //   constructor(humanName, humanAge) {
 //     this.name = humanName;
@@ -59,7 +56,7 @@ const ancestor = {
 //     return this.name
 //   }
 // }
- 
+
 // const person1 = new Human('Dasha', 35)
 // const person2 = new Human('Yura', 49)
 
@@ -72,11 +69,28 @@ const ancestor = {
 // console.log(person1.hasOwnProperty('getName'));
 // console.log(person1.getName());
 
+class Car {
+  #brand;
+  
+  constructor(params) {
+    this.#brand = params.brand;
+    this.model = params.model;
+    this.price = params.price;
+  }
 
-let str = 'Hello wo'
+  getPrice() {
+    return this.price;
+  }
 
-function getStr(newStr) {
-  return `${str}${newStr}`
+  changePrice(newPrice) {
+    this.price = newPrice;
+  }
+
+  getBrand() {
+    return this.#brand;
+  }
+
+  changeBrand(newBrand) {
+    this.#brand = newBrand;
+  }
 }
-
-console.log(getStr('rld!'));

@@ -54,6 +54,10 @@ const ancestor = {
 //     this.name = humanName;
 //     this.age = humanAge;
 //   }
+
+//   getName() {
+//     return this.name
+//   }
 // }
  
 // const person1 = new Human('Dasha', 35)
@@ -65,14 +69,14 @@ const ancestor = {
 // console.log(person1.hasOwnProperty('name'));
 // console.log(person1.hasOwnProperty('age1'));
 
+// console.log(person1.hasOwnProperty('getName'));
+// console.log(person1.getName());
 
-const arr = ["Nanitoids", "Prolonger", "Antigravitator", "Droid"];
 
-function removeItem(item) {
-  if (arr.includes(item)) {
-    arr.splice(arr.indexOf(item), 1)
-  }
+let str = 'Hello wo'
+
+function getStr(newStr) {
+  return `${str}${newStr}`
 }
 
-console.log(removeItem("Prolonger"));
-console.log(arr);
+console.log(getStr('rld!'));
